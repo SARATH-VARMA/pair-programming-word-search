@@ -35,4 +35,26 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['S', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['E', 'E', 'I', 'O', 'F', 'E', 'L', 'D'],
+      ['I', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['N', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['F', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['F', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['E', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['L', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['D', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'SEINFFELD')
+
+    assert.isTrue(result);
+  });
+
+  it("should return false if the array is empty", function() {
+    const result = wordSearch([], 'FRANK')
+
+    assert.isFalse(result);
+  });
 });
